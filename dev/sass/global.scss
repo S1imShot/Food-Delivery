@@ -1,0 +1,24 @@
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+::selection {
+    background: $secondary-color;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: #1A1A1A;
+    color: #fff;
+    background-image: url(assets/img/main-img.png);
+    background-repeat: no-repeat;
+    background-size: 100% 1080px;
+}
+
+[class*="__container"] {
+    max-width: 1140px;
+    padding: 0 15px;
+    margin-inline: auto;
+}

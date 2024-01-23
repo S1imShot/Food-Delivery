@@ -1,0 +1,22 @@
+# File with settings for the editor.
+#
+# In editors from JetBrains, BBEdit, Coda or SourceLair
+# this file is already supported and there is no need to produce any additional
+# actions.
+#
+# For other editors - go
+# at http://editorconfig.org, in the “Download a Plugin” section
+# download editor add-on.
+
+# editorconfig.org
+root = true
+
+[*]
+indent_style = tab
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.md]
+trim_trailing_whitespace = false

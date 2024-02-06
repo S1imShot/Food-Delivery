@@ -1,0 +1,58 @@
+.about {
+    &__container {
+        background-color: #252525;
+    }
+    
+    &__title {
+        position: relative;
+        text-align: center;
+        padding-top: 105px;
+        padding-bottom: 60px;
+
+        &::before {
+           position: absolute;
+           content: "ABOUT";
+           color: #303030;
+           font-size: 100px;
+           font-weight: 900;
+           letter-spacing: 10px;
+           transform: translate(-50%, -30%);
+        }
+
+        h2 {
+            position: relative;
+            line-height: 60px;
+            letter-spacing: 8px;
+            font-size: 30px;
+        }
+    }
+
+    &__subtitle {
+        text-align: center;
+        max-width: 734px;
+        margin-inline: auto;
+    }
+
+    &__swipe {
+        position: relative;
+        height: 100%;
+    }
+}
+
+.swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    &-slide {
+        background-position: center;
+        background-size: cover;
+        width: 300px;
+        height: 300px;
+        
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+}

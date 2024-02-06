@@ -1,0 +1,43 @@
+@media screen and (max-width: 320px) {
+    .logo-header {
+        display: none;
+    }
+
+    .header {
+        &__container {
+            justify-content: center;
+        }
+        
+        &__menu {
+            flex-direction: column;
+        }
+    }
+
+    .menu__list {
+        gap: 20px;
+    }
+
+    .first-screen {
+        &__contacts {
+            flex-direction: column;
+        }
+
+        &__title {
+            h1 {
+                font-size: 23px;
+            }
+        }
+
+        &__subtitle {
+            h2 {
+                font-size: 12px;
+            }
+        }
+
+        &__button {
+            padding: 12px 30px;
+            font-size: 15px;
+        }
+    }
+
+}

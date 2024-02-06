@@ -14,7 +14,7 @@ body {
     color: #fff;
     background-image: url(assets/img/main-img.png);
     background-repeat: no-repeat;
-    background-size: 100% 1080px;
+    background-size: 100%;
 }
 
 [class*="__container"] {
@@ -22,3 +22,14 @@ body {
     padding: 0 15px;
     margin-inline: auto;
 }
+
+[class*="__subtitle"] {
+    p {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 26px; /* 162.5% */
+        letter-spacing: -0.2px;
+        opacity: .7;
+    }
+}
+

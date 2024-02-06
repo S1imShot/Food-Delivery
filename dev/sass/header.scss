@@ -12,6 +12,9 @@
 	}
 	&__logo {
 		text-decoration: none;
+		& img {
+			vertical-align: unset;
+		}
 	}
 }
 
@@ -19,10 +22,25 @@
 	margin-right: 9px;
 }
 
+
 .menu {
+	display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
 	&__list {
 		display: flex;
 		gap: 45px;
+		margin: 0;
+		padding: 0;
+		&.show {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			background-color: $secondary-color;
+			.menu__link:hover {
+				color: #000;
+			}
+		}
 	}
 	&__item {
 		list-style: none;

@@ -1,14 +1,53 @@
 @media screen and (max-width: 575px) {
     .header {
-        &__container {
-            flex-direction: column;
+        margin-bottom: 20px;
+    }
+    
+    .first-screen {
+        &__title {
+            h1 {
+             font-size: 50px;
+            } 
         }
-        &__logo {
-            margin-top: 20px;
-            margin-bottom: 10px;
+
+        &__subtitle {
+            &:not(:last-child) {
+                margin-bottom: 20px;
             }
+            
+            h2 {
+                font-size: 14px;
+            }
+        }
+
+        &__button {
+            margin-bottom: 20px;
+        }
+    }    
+    .logo {
+        &-name {
+            display: none;
+        }
+        &-header {
+            width: 50px;
+        }
     }
 
-    
-    
+    .contacts{
+        &__column {
+        gap: 5px;
+        }
+
+        &__title {
+            h4 {
+                font-size: 13px;
+            }
+        }
+
+        &__subtitle {
+            p {
+                font-size: 12px;
+            }
+        }
+    }
 }

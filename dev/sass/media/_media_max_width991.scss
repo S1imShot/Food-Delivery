@@ -1,0 +1,13 @@
+@media screen and (max-width: 991px) {
+    .menu {
+        &__link {
+            font-size: 24px;
+        }
+        &__list {
+            align-items: center;
+            gap: 20px;
+        }
+    }
+    
+
+}

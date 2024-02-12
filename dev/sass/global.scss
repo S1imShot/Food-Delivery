@@ -15,6 +15,15 @@ body {
     background-image: url(assets/img/main-img.png);
     background-repeat: no-repeat;
     background-size: 100%;
+
+    &::-webkit-scrollbar {   
+        width: 5px;               /* ширина всієї смуги прокрутки */ 
+    }
+      
+    &::-webkit-scrollbar-thumb {   
+        background-color: $secondary-color;    /* колір скролбару */   
+        border-radius: 20px;       /* заокруглення скролбару */
+     }
 }
 
 [class*="__container"] {
@@ -33,3 +42,17 @@ body {
     }
 }
 
+.navbar {
+    &-collapse {
+        justify-content: flex-end;
+    }
+    
+    &-toggler {
+        &-icon {
+            background-image: none;
+        }
+        &:focus {
+            box-shadow: none;
+        }
+    }
+}

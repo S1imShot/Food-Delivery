@@ -1,18 +1,11 @@
 @media screen and (max-width: 320px) {
-    .logo-header {
-        display: none;
-    }
-
-    .header {
-        &__container {
+    .navbar {
+        .container-fluid {
             justify-content: center;
         }
-        
-        &__menu {
-            flex-direction: column;
-        }
     }
 
+    
     .menu__list {
         gap: 20px;
     }

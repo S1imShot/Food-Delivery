@@ -3,7 +3,6 @@
 	&__container {
 		display: flex;
 		justify-content: space-between;
-		min-height: 90px;
 		align-items: center;
 	}
 	&__decoration {
@@ -25,8 +24,8 @@
 
 .menu {
 	display: flex;
-    flex-direction: row-reverse;
     align-items: center;
+	padding: 30px 0 30px 0;
 	&__list {
 		display: flex;
 		gap: 45px;
@@ -56,3 +55,22 @@
 		}
 	}
 }
+
+.hamburger {
+	&.is-active:hover {
+		opacity: unset;
+	}
+	&:hover {
+		opacity: unset;
+		.hamburger-inner {
+			background-color: #34C759;
+			&::before {
+				background-color: #34C759;
+			}
+			&::after {
+				background-color: #34C759;
+			}
+		}
+	}
+}
+

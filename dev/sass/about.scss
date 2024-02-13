@@ -1,27 +1,25 @@
 .about {
+    margin-bottom: 120px;
     &__container {
         background-color: #252525;
     }
     
     &__title {
-        position: relative;
-        text-align: center;
         padding-top: 105px;
         padding-bottom: 60px;
+        letter-spacing: 0.2em;
+        text-transform: capitalize;
+        text-align: center;
 
         &::before {
-           position: absolute;
            content: "ABOUT";
-           color: #303030;
-           font-size: 100px;
-           font-weight: 900;
-           letter-spacing: 10px;
-           transform: translate(-50%, -30%);
         }
-
+        &::after {
+            display: none;
+        }
         h2 {
             position: relative;
-            line-height: 60px;
+            line-height: 200%;
             letter-spacing: 8px;
             font-size: 30px;
         }
@@ -31,6 +29,12 @@
         text-align: center;
         max-width: 734px;
         margin-inline: auto;
+        p {
+            margin-bottom: 0;
+        }
+        &:not(:last-child) {
+            margin-bottom: 50px;
+        }
     }
 
     &__swipe {

@@ -1,4 +1,5 @@
 @media screen and (max-width: 767px) {
+
     .header {
         margin-bottom: 20px;
     }
@@ -18,13 +19,53 @@
         &__button {
             margin-bottom: 20px;
         }
+
+        &__contacts {
+            margin-bottom: 50px;
+        }
     }
-    .contacts__column {
+    .contacts-column {
         min-width: 0;
     }
 
     .menu__list {
         gap: 15px;
     }
+
+    .about {
+        margin-bottom: 90px;
+        .about__title {
+            padding-top: 50px;
+            padding-bottom: 40px;
+            
+                &::before {
+                    font-size: 80px;
+                }
+    
+                h2 {
+                    font-size: 20px;
+                }
+        }
+    }
+
+    .work {
+        .work__title {
+            h2 {
+                font-size: 30px;
+            }
+            &::before {
+                font-size: 80px;
+            }
+            &::after {
+                margin-top: 15px;
+            }
+        }
+
+        .work__advantages {
+            gap: 20px;
+        }
+    }
+        
+
 
 }

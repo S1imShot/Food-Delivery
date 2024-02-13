@@ -9,5 +9,10 @@
         }
     }
     
-
+    .work__container {
+        .work__advantages {
+            flex-wrap: wrap;
+            justify-content: center;
+        } 
+    }
 }

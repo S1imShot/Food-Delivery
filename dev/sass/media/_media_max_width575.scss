@@ -11,10 +11,6 @@
         }
 
         &__subtitle {
-            &:not(:last-child) {
-                margin-bottom: 20px;
-            }
-            
             h2 {
                 font-size: 14px;
             }
@@ -25,21 +21,60 @@
         }
     }    
 
-    .contacts{
-        &__column {
+    .contacts   {
+        &-column {
         gap: 5px;
         }
 
-        &__title {
+        &-title {
             h4 {
                 font-size: 13px;
             }
         }
 
-        &__subtitle {
+        &-subtitle {
             p {
                 font-size: 12px;
             }
+        }
+    }
+
+    .about {
+        margin-bottom: 50px;
+        .about {
+            &__title {
+                &::before {
+                    font-size: 50px;
+                    transform: translate(-50%, -20%);
+                }
+                h2 {
+                    line-height: 30px;
+                }
+            }
+            &__subtitle {
+                &:not(:last-child) {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+
+    .work {
+        .work__title {
+            margin-bottom: 50px;
+            h2 {
+                font-size: 20px;
+            }
+            &::before {
+                font-size: 50px;
+            }
+            &::after {
+                margin-top: 5px;
+            }
+        }
+
+        .work__advantages {
+            gap: 10px;
         }
     }
 }

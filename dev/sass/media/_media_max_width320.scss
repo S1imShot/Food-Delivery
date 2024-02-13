@@ -33,4 +33,19 @@
         }
     }
 
+    .about {
+        .about {
+            &__title {
+                &::before {
+                    transform: translate(-50%, -10%);
+                }
+            }
+            &__subtitle {
+                &:not(:last-child) {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+
 }

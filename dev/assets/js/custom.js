@@ -1,9 +1,13 @@
 const burger = document.querySelector(".hamburger");
-
 burger.addEventListener("click", function () {
 	burger.classList.toggle("is-active");
 
-});  
+});
+
+const advantage = document.querySelector(".advantage");
+advantage.addEventListener("click", function() {
+	advantage.classList.toggle("active")
+});
 
 var swiper = new Swiper(".mySwiper", {
 	effect: "coverflow",

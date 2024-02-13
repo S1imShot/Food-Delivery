@@ -32,6 +32,26 @@ body {
     margin-inline: auto;
 }
 
+[class*="__title"] {
+
+    &::before {
+        position: absolute;
+        color: #303030;
+        font-size: 100px;
+        font-weight: 900;
+        letter-spacing: 20px;
+        transform: translate(-50%, -30%);
+    }
+    &::after {
+        position: absolute;
+        content: "";
+        width: 60px;
+        border: 1px solid #34C759;
+        transform: translate(-50%, 0);
+        margin-top: 25px;
+    }
+}
+
 [class*="__subtitle"] {
     p {
         font-size: 16px;

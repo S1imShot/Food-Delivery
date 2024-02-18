@@ -4,9 +4,18 @@ burger.addEventListener("click", function () {
 
 });
 
-const advantage = document.querySelector(".advantage");
-advantage.addEventListener("click", function() {
-	advantage.classList.toggle("active")
+
+const ratingLabel = document.querySelectorAll(".actions-rating__label")
+const ratingCount = document.querySelector(".actions-rating__count");
+
+ratingLabel.forEach(element => {
+	
+	const label = element;
+	const getLabelAttr = element.getAttribute("data-value");
+
+	label.addEventListener("click", function() {
+		ratingCount.innerHTML = getLabelAttr;
+	})
 });
 
 var swiper = new Swiper(".mySwiper", {

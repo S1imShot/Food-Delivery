@@ -67,6 +67,18 @@
         }
     }
         
-
+    .dishes {
+        .dishes__title {
+            h2 {
+                font-size: 30px;
+            }
+            &::before {
+                font-size: 80px;
+            }
+            &::after {
+                margin-top: 15px;
+            }
+        }
+    }
 
 }

@@ -1,0 +1,80 @@
+.chefs {
+    margin-bottom: 30px;
+    .chefs {
+        &__title {
+            text-align: center;
+            letter-spacing: 0.2em;
+            text-transform: capitalize;
+            margin-bottom: 90px;
+            padding-top: 90px;
+    
+            h2 {
+                position: relative;
+                font-weight: 400;
+                font-size: 36px;
+                line-height: 250%;
+                letter-spacing: 0.2em;
+            }
+    
+            &::before {
+                content: "CHEFS";
+                transform: translate(-50%, -20%);
+            }
+        }
+
+        &__card-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &-card {
+            min-width: 350px;
+            &__about {
+                display: flex;
+                align-items: center;
+                margin-bottom: 24px;
+            }
+
+            &__icon {
+                margin-right: 24px;
+            }
+
+            &__name {
+                h4 {
+                    font-weight: 400;
+                    font-size: 18px;
+                    letter-spacing: -0.01em;
+                }
+            }
+
+            &__position {
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 133%;
+                letter-spacing: -0.01em;
+                color: rgba(255, 255, 255, 0.5);
+            }
+
+            &__photo {
+                display: flex;
+                justify-content: space-between;
+
+                .chefs-photo {
+                    width: 65px;
+                    height: 65px;
+                    object-fit: cover;
+                    object-position: center;
+
+                    &-big {
+                        width: 160px;
+                        height: 65px;
+                        object-fit: cover;
+                        object-position: center;
+                    }
+                }
+            }
+        }
+    }
+
+
+}

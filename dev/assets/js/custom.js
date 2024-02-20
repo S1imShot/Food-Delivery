@@ -6,17 +6,30 @@ burger.addEventListener("click", function () {
 
 
 const ratingLabel = document.querySelectorAll(".actions-rating__label")
-const ratingCount = document.querySelector(".actions-rating__count");
+const ratingCount = document.querySelectorAll(".actions-rating__count");
 
-ratingLabel.forEach(element => {
+
+ratingCount.forEach(element => {
+	const count = element;
+
+	ratingLabel.forEach(element => {
 	
-	const label = element;
-	const getLabelAttr = element.getAttribute("data-value");
+		const label = element;
+		const getLabelAttr = element.getAttribute("data-value");
+	
+		label.addEventListener("click", function() {
+			count.innerHTML = getLabelAttr;
+		})
 
-	label.addEventListener("click", function() {
-		ratingCount.innerHTML = getLabelAttr;
-	})
-});
+		console.log(label);
+	});
+
+})
+
+
+
+
+
 
 var swiper = new Swiper(".mySwiper", {
 	effect: "coverflow",
@@ -38,5 +51,20 @@ var swiper = new Swiper(".mySwiper", {
 	  el: ".swiper-pagination",
 	},
 });
+
+// var swiperSecond = new Swiper(".mySwiper-sec", {
+// 	centeredSlides: true,
+// 	slidesPerView: "auto",
+// 	loop: true,
+
+// 	navigation: {
+// 	  nextEl: ".swiper-button-next",
+// 	  prevEl: ".swiper-button-prev",
+// 	},
+
+// 	pagination: {
+// 		el: ".swiper-pagination",
+// 	  },
+//   });
 
 AOS.init();

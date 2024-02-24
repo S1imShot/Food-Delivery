@@ -59,9 +59,15 @@
         }
     }
 
-    .work {
-        .work__title {
+    .work,
+    .dishes,
+    .chefs {
+        margin-bottom: 50px;
+        .work__title,
+        .dishes__title,
+        .chefs__title {
             margin-bottom: 50px;
+            padding-top: 0;
             h2 {
                 font-size: 20px;
             }
@@ -78,19 +84,27 @@
         }
     }
 
-    .dishes {
-        .dishes__title {
-            margin-bottom: 50px;
-            padding-top: 50px;
-            h2 {
-                font-size: 20px;
+    .chefs {
+        .chefs__card-container {
+            row-gap: 50px;
+        }
+        .chefs-card {
+            &__about {
+                justify-content: center;
             }
-            &::before {
-                font-size: 50px;
-            }
-            &::after {
-                margin-top: 5px;
+    
+            &__photo {
+                justify-content: center;
+                flex-direction: column;
+                gap: 20px;
+                align-items: center;
+
+            .chefs-photo,
+            .chefs-photo-big {
+                    width: 100%;
+                }
             }
         }
     }
+
 }

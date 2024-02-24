@@ -24,11 +24,16 @@
 
         &__card-container {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
+            flex-wrap: wrap;
+            row-gap: 10px;
+            overflow: hidden;
         }
 
         &-card {
             min-width: 350px;
+            padding: 0 10px;
+
             &__about {
                 display: flex;
                 align-items: center;
@@ -37,6 +42,14 @@
 
             &__icon {
                 margin-right: 24px;
+                max-width: 65px;
+                img {
+                    height: 65px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    object-position: center;
+                    width: 100%;
+                }
             }
 
             &__name {
@@ -48,18 +61,22 @@
             }
 
             &__position {
-                font-weight: 400;
-                font-size: 12px;
-                line-height: 133%;
-                letter-spacing: -0.01em;
-                color: rgba(255, 255, 255, 0.5);
+                p {
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 133%;
+                    letter-spacing: -0.01em;
+                    color: rgba(255, 255, 255, 0.5);
+                }
+
             }
 
             &__photo {
                 display: flex;
                 justify-content: space-between;
 
-                .chefs-photo {
+                .chefs-photo,
+                .chefs-photo-big {
                     width: 65px;
                     height: 65px;
                     object-fit: cover;
@@ -67,9 +84,6 @@
 
                     &-big {
                         width: 160px;
-                        height: 65px;
-                        object-fit: cover;
-                        object-position: center;
                     }
                 }
             }

@@ -7,6 +7,20 @@ burger.addEventListener("click", function () {
 
 const ratingLabel = document.querySelectorAll(".actions-rating__label")
 const ratingCount = document.querySelectorAll(".actions-rating__count");
+const ratingItem = document.querySelectorAll('.actions-rating__item');
+
+
+for (let i = 0; i < ratingLabel.length; i++) {
+	ratingLabel[i].setAttribute('for', i);
+}
+
+for (let i = 0; i < ratingItem.length; i++) {
+	ratingItem[i].setAttribute('id', i);
+}
+
+for (let i = 0; i < ratingCount.length; i++) {
+	ratingCount[i].setAttribute('data-number', i);
+}
 
 
 ratingCount.forEach(element => {
@@ -15,13 +29,13 @@ ratingCount.forEach(element => {
 	ratingLabel.forEach(element => {
 	
 		const label = element;
+
 		const getLabelAttr = element.getAttribute("data-value");
 	
 		label.addEventListener("click", function() {
 			count.innerHTML = getLabelAttr;
+			
 		})
-
-		console.log(label);
 	});
 
 })

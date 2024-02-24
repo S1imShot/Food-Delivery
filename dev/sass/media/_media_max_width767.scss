@@ -49,8 +49,12 @@
         }
     }
 
-    .work {
-        .work__title {
+    .work,
+    .dishes,
+    .chefs {
+        .work__title,
+        .dishes__title,
+        .chefs__title {
             h2 {
                 font-size: 30px;
             }
@@ -66,19 +70,4 @@
             gap: 20px;
         }
     }
-        
-    .dishes {
-        .dishes__title {
-            h2 {
-                font-size: 30px;
-            }
-            &::before {
-                font-size: 80px;
-            }
-            &::after {
-                margin-top: 15px;
-            }
-        }
-    }
-
 }

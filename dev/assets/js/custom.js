@@ -4,41 +4,41 @@ burger.addEventListener("click", function () {
 
 });
 
+const dishes = document.querySelectorAll(".dishes__card");
 
-const ratingLabel = document.querySelectorAll(".actions-rating__label")
-const ratingCount = document.querySelectorAll(".actions-rating__count");
-const ratingItem = document.querySelectorAll('.actions-rating__item');
-
-
-for (let i = 0; i < ratingLabel.length; i++) {
-	ratingLabel[i].setAttribute('for', i);
-}
-
-for (let i = 0; i < ratingItem.length; i++) {
-	ratingItem[i].setAttribute('id', i);
-}
-
-for (let i = 0; i < ratingCount.length; i++) {
-	ratingCount[i].setAttribute('data-number', i);
-}
-
-
-ratingCount.forEach(element => {
-	const count = element;
-
-	ratingLabel.forEach(element => {
+dishes.forEach((dish, index) => {
+	const ratingLabel = dish.querySelectorAll(".actions-rating__label")
+	const ratingCounts = dish.querySelectorAll(".actions-rating__count");
+	const ratingItem = dish.querySelectorAll('.actions-rating__item');
 	
-		const label = element;
-
-		const getLabelAttr = element.getAttribute("data-value");
 	
-		label.addEventListener("click", function() {
-			count.innerHTML = getLabelAttr;
-			
-		})
-	});
-
+	for (let i = 0; i < ratingLabel.length; i++) {
+		ratingLabel[i].setAttribute('for', index + "" + i);
+	}
+	
+	for (let i = 0; i < ratingItem.length; i++) {
+		ratingItem[i].setAttribute('id', index + "" + i);
+	}
+	
+	for (let i = 0; i < ratingCounts.length; i++) {
+		ratingCounts[i].setAttribute('data-number', i);
+	}
+		
+	ratingCounts.forEach(count => {
+			ratingLabel.forEach(label => {
+	
+			const labelAttr = label.getAttribute("data-value");
+		
+			label.addEventListener("click", function() {
+				count.innerHTML = labelAttr;
+				
+			})
+		});
+	
+	})
 })
+
+
 
 
 

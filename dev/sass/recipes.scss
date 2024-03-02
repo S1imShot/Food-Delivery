@@ -74,6 +74,7 @@
 
 .event__card {
     &-big {
+        position: relative;
         max-width: 540px;
         background-image: url(assets/img/event-img-01.png);
         background-position: center;
@@ -85,6 +86,15 @@
 }
 
 .card-big {
+    text-decoration: none;
+    color: #fff;
+    
+    &:hover {
+        .arrow {
+            background-color: #34C759;
+        }
+    }  
+
     &__content {
         padding: 60px 90px;
     }
@@ -110,4 +120,20 @@
     font-weight: 700;
     font-size: 12px;
     line-height: 250%;
+}
+
+.arrow {
+    position: absolute;
+    max-width: 40px;
+    height: 40px;
+    margin-left: auto;
+    top: 30px;
+    right: 30px;
+    background: rgba(0, 0, 0, 0.3137254902);
+    border-radius: 50%;
+    transition: all .3s linear;
+
+    img {
+        padding: 13px;
+    }
 }

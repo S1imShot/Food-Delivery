@@ -1,21 +1,8 @@
 .dishes {
     margin-bottom: 30px;
-    .dishes__title {
-        text-align: center;
-        letter-spacing: 0.2em;
-        text-transform: capitalize;
-        margin-bottom: 90px;
-        padding-top: 117px;
-        h2 {
-            position: relative;
-            font-weight: 400;
-            font-size: 36px;
-            line-height: 250%;
-        }
-    
+    .title {
         &::before {
             content: "DISHES";
-            transform: translate(-50%, -20%);
         }
     }
     

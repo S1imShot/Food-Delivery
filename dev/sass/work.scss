@@ -1,39 +1,24 @@
 .work {
     margin-bottom: 30px;
+    
+    .title {
+        &::before {
+            content: "WORK";
+        }
+    }
 }
+
 .work__container {
     .work {
-        &__title {
-            position: relative;
-            letter-spacing: 0.2em;
-            text-transform: capitalize;
-            text-align: center;
-            margin-bottom: 90px;
-
-            h2 {
-                position: relative;
-                font-weight: 400;
-                font-size: 36px;
-                line-height: 250%
-            }
-            &::before {
-                content: "WORK";
-                transform: translate(-50%, -20%);
-            }
-
-        }
-        
         &__advantages {
              display: flex;
              gap: 30px;
             
             a:hover {
                 background-color: $secondary-color;
+
                 .advantage {
-                    &-title {
-                        color: #000;
-                    }
-            
+                    &-title,
                     &-subtitle {
                         color: #000;
                     }
@@ -55,26 +40,28 @@
     text-decoration: none;
     color: #fff;
     transition: .3s all linear;
-        &-title {
-            h3 {
-                font-weight: 400;
-                font-size: 22px;
-                letter-spacing: -0.01em;
-                text-transform: capitalize;
-            }
-        }
-        &-subtitle {
+
+    &-title {
+        h3 {
             font-weight: 400;
-            font-size: 13px;
-            line-height: 138%;
+            font-size: 22px;
             letter-spacing: -0.01em;
-            color: rgba(255, 255, 255, 0.5);
+            text-transform: capitalize;
         }
-        &-decoration {
-            width: 56px;
-            border: 1px solid $secondary-color;
-            margin-top: 20px;
-            margin-bottom: 24px;
-        }
+    }
+    &-subtitle {
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 138%;
+        letter-spacing: -0.01em;
+        color: rgba(255, 255, 255, 0.5);
+    }
+    
+    &-decoration {
+        width: 56px;
+        border: 1px solid $secondary-color;
+        margin-top: 20px;
+        margin-bottom: 24px;
+    }
 }
 

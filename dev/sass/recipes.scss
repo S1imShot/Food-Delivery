@@ -1,39 +1,18 @@
 .recipes {
     margin-bottom: 90px;
+
     .title {
         &::before {
             content: "RECIPES";
         }
     }
+
     .recipes {
-        
-        
         &__content {
             display: flex;
             gap: 30px;
         }
-        // &__title {
-        //     text-align: center;
-        //     letter-spacing: 0.2em;
-        //     text-transform: capitalize;
-        //     margin-bottom: 90px;
-        //     padding-top: 90px;
-        //     h2 {
-        //         position: relative;
-        //         font-weight: 400;
-        //         font-size: 36px;
-        //         line-height: 250%;
-        //         letter-spacing: 0.2em;
-        //     }
-            
-                &::before {
-                    content: "RECIPES";
-                    // transform: translate(-50%, -20%);
-                }
-
-            
-        }
-    
+    }
 }
 
 
@@ -60,6 +39,7 @@
     }
     &-date {
         margin-bottom: 25px;
+
         .date {
             font-weight: 400;
             font-size: 14px;

@@ -64,9 +64,7 @@
 		opacity: unset;
 		.hamburger-inner {
 			background-color: #34C759;
-			&::before {
-				background-color: #34C759;
-			}
+			&::before,
 			&::after {
 				background-color: #34C759;
 			}

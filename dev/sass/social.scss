@@ -1,0 +1,60 @@
+.title {
+    &::before {
+        content: "SOCIAL";
+    }
+}
+
+// .social {
+//     .title {
+//             position: relative;
+//             text-align: center;
+//             text-transform: capitalize;
+//             margin-bottom: 90px;
+//             padding-top: 90px;
+//             font-weight: 400;
+//             font-size: 36px;
+//             line-height: 250%;
+//             letter-spacing: 0.2em;
+//             &::before {
+//                 content: "SOCIAL";
+//                 position: absolute;
+//                 color: #303030;
+//                 font-size: 100px;
+//                 font-weight: 900;
+//                 letter-spacing: 20px;
+//                 z-index: -1;
+//                 left: 50%;
+//                 transform: translate(-50%, 0%);
+//             }
+//             &::after {
+//                 position: absolute;
+//                 content: "";
+//                 width: 60px;
+//                 border: 1px solid #34C759;
+//                 transform: translate(-50%, 0);
+//                 left: 50%;
+//                 top: 120%;
+//             }
+//     }
+    // .social {
+    //     &__title {
+    //         text-align: center;
+    //         letter-spacing: 0.2em;
+    //         text-transform: capitalize;
+    //         margin-bottom: 90px;
+    //         padding-top: 90px;
+    //         h2 {
+    //             position: relative;
+    //             font-weight: 400;
+    //             font-size: 36px;
+    //             line-height: 250%;
+    //             letter-spacing: 0.2em;
+    //         }
+    
+    //         &::before {
+    //             content: "SOCIAL";
+    //             transform: translate(-50%, -20%);
+    //         }
+    //     }
+    // }
+// }

@@ -62,25 +62,23 @@
     .work,
     .dishes,
     .chefs,
-    .recipes {
+    .recipes,
+    .social {
         margin-bottom: 50px;
-        .work__title,
-        .dishes__title,
-        .chefs__title,
-        .recipes__title {
+        .title {
             margin-bottom: 50px;
             padding-top: 0;
-            h2 {
-                font-size: 20px;
-            }
+            font-size: 20px;
+            
             &::before {
+                letter-spacing: 15px;
                 font-size: 50px;
             }
             &::after {
                 margin-top: 5px;
             }
         }
-
+        
         .work__advantages {
             gap: 10px;
         }

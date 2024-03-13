@@ -52,17 +52,14 @@
     .work,
     .dishes,
     .chefs,
-    .recipes {
+    .recipes,
+    .social {
         .recipes__content {
             gap: 10px;
         }
-        .work__title,
-        .dishes__title,
-        .chefs__title,
-        .recipes__title {
-            h2 {
-                font-size: 30px;
-            }
+        .title {
+            font-size: 30px;
+    
             &::before {
                 font-size: 80px;
             }

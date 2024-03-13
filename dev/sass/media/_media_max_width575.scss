@@ -61,11 +61,13 @@
 
     .work,
     .dishes,
-    .chefs {
+    .chefs,
+    .recipes {
         margin-bottom: 50px;
         .work__title,
         .dishes__title,
-        .chefs__title {
+        .chefs__title,
+        .recipes__title {
             margin-bottom: 50px;
             padding-top: 0;
             h2 {
@@ -105,6 +107,28 @@
                     height: 100px;
                 }
             }
+        }
+    }
+
+    .recipes {
+        .content {
+            &-tag,
+            &-date,
+            &-description {
+                margin-bottom: 0;
+                .description {
+                    font-size: 14px;
+                }
+            }
+
+
+        }
+
+        .recipes__content {
+            flex-direction: column;
+        }
+        .card-big__activity {
+            padding-bottom: 25px;
         }
     }
 

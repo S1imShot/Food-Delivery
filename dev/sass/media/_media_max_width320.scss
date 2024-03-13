@@ -48,4 +48,14 @@
         }
     }
 
+    .recipes {
+        .recipes__title {
+            h2 {
+                font-size: 18px;
+            }
+            &::before {
+                letter-spacing: 15px;
+            }
+        }
+    }
 }

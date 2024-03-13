@@ -19,4 +19,14 @@
     .first-screen__contacts {
         justify-content: center;
     }
+
+    .card-big__content {
+        padding: 30px 60px;
+    }
+
+    .card-small__info {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
 }

@@ -51,10 +51,15 @@
 
     .work,
     .dishes,
-    .chefs {
+    .chefs,
+    .recipes {
+        .recipes__content {
+            gap: 10px;
+        }
         .work__title,
         .dishes__title,
-        .chefs__title {
+        .chefs__title,
+        .recipes__title {
             h2 {
                 font-size: 30px;
             }
@@ -69,5 +74,13 @@
         .work__advantages {
             gap: 20px;
         }
+    }
+
+    .event__cards {
+        gap: 10px;
+    }
+
+    .card-big__content {
+        padding: 15px 30px;
     }
 }

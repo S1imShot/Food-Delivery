@@ -1,14 +1,14 @@
 .header {
 	margin-bottom: 80px;
+	border-bottom: 1px solid rgb(255 255 255 / 15%);
+    
+
 	&__container {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 	}
-	&__decoration {
-		border-bottom: 1px solid #fff;
-		opacity: .1;
-	}
+
 	&__logo {
 		text-decoration: none;
 		& img {

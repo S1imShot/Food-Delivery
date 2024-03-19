@@ -32,28 +32,12 @@
     }
 
     &__button {
-        padding: 25px 57px;
-        font-size: 18px;
-        font-weight: 700;
-        letter-spacing: 3.6px;
-        outline: 2px solid #303030;
-        border-radius: 43px;
-        cursor: pointer;
-        transition: all .3s linear;
         margin-bottom: 74px;
 
-        a {
-            text-decoration: none;
-            color: rgba(255, 255, 255, 0.5);
-         
-        }
-        
-        &:hover {
-            outline: none;
-            background-color: $secondary-color;
-            a {
-                color: #1A1A1A;
-            }
+        .button {
+            padding: 25px 57px;
+            font-size: 18px;
+            font-weight: 700;
         }
 
     }

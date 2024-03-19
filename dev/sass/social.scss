@@ -3,3 +3,65 @@
         content: "SOCIAL";
     }
 }
+
+.social {
+    margin-bottom: 120px;
+
+    &__cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+    }
+    &__card {
+        max-width: 350px;
+        background-color: #262626;
+        border-radius: 6px;
+
+        &-header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #303030;
+            padding: 25px;
+            margin-bottom: 20px;
+            min-width: 315px;
+        }
+
+        &-body {
+            padding: 0 25px 25px;
+        }
+    }
+
+    .button {
+        color: #737373;
+        padding: 13px 18px;
+    }
+}
+
+.header-icon-card {
+    border: 2px solid #303030;
+    border-radius: 50%;
+    padding: 5px;
+    max-width: 40px;
+}
+
+.card-header-company {
+    margin-left: 20px;
+}
+
+.card-header-button{
+    margin-left: auto;
+}
+
+.header-company-card {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 214%;
+    color: #bfbfbf;
+    text-decoration: none;
+    transition: .3s all linear;
+
+    &:hover {
+        color: $secondary-color;
+    }
+}

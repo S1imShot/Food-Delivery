@@ -16,14 +16,14 @@
             }
         }
 
-        &__button {
+        .button {
             margin-bottom: 20px;
         }
     }    
 
     .contacts   {
         &-column {
-        gap: 5px;
+            gap: 5px;
         }
 
         &-title {

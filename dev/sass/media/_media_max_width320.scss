@@ -11,10 +11,6 @@
     }
 
     .first-screen {
-        &__contacts {
-            flex-direction: column;
-        }
-
         &__title {
             h1 {
                 font-size: 23px;
@@ -27,11 +23,16 @@
             }
         }
 
-        &__button {
+        .button {
             padding: 12px 30px;
             font-size: 15px;
         }
     }
+
+    .contacts {
+        flex-direction: column;
+    }
+
 
     .about {
         .title {

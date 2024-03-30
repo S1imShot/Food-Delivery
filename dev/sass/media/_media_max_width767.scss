@@ -16,17 +16,17 @@
             }
         }
 
-        &__button {
+        .button {
             margin-bottom: 20px;
         }
-
-        &__contacts {
-            margin-bottom: 50px;
-            
-        }
     }
-    .contacts-column {
-        min-width: 0;
+
+    .contacts {
+        margin-bottom: 50px;
+
+        &-column {
+            min-width: 0;
+        }
     }
 
     .menu__list {

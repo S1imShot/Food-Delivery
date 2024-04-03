@@ -10,7 +10,6 @@
 	}
 
 	&__logo {
-		text-decoration: none;
 		& img {
 			vertical-align: unset;
 		}
@@ -45,14 +44,8 @@
 		list-style: none;
 	}
 	&__link {
-		text-decoration: none;
-		color: #fff;
 		font-size: 14px;
 		font-weight: 700;
-		transition: all .3s linear;
-		&:hover {
-			color: $secondary-color;
-		}
 	}
 }
 

@@ -78,7 +78,6 @@ body {
     font-size: 10px;
     line-height: 400%;
     letter-spacing: 0.2em;
-    text-decoration: none;
     outline: 2px solid #303030;
     border-radius: 43px;
     color: rgba(255, 255, 255, 0.5);
@@ -104,5 +103,15 @@ body {
         &:focus {
             box-shadow: none;
         }
+    }
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    transition: all .3s linear;
+    
+    &:hover {
+        color: $secondary-color;
     }
 }

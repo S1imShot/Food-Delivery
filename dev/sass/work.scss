@@ -11,20 +11,22 @@
 .work__container {
     .work {
         &__advantages {
-             display: flex;
-             gap: 30px;
+            display: flex;
+            gap: 30px;
             
-            a:hover {
-                background-color: $secondary-color;
-
-                .advantage {
-                    &-title,
-                    &-subtitle {
-                        color: #000;
-                    }
-            
-                    &-decoration {
-                        border: 1px solid #000;
+            a {
+                &:hover {
+                    background-color: $secondary-color;
+    
+                    .advantage {
+                        &-title,
+                        &-subtitle {
+                            color: #000;
+                        }
+                
+                        &-decoration {
+                            border: 1px solid #000;
+                        }
                     }
                 }
             }
@@ -37,9 +39,6 @@
     border-radius: 6px;
     padding: 24px;
     max-width: 255px;
-    text-decoration: none;
-    color: #fff;
-    transition: .3s all linear;
 
     &-title {
         h3 {
@@ -47,14 +46,20 @@
             font-size: 22px;
             letter-spacing: -0.01em;
             text-transform: capitalize;
+            transition: all .3s linear;
         }
     }
+    
     &-subtitle {
         font-weight: 400;
         font-size: 13px;
         line-height: 138%;
         letter-spacing: -0.01em;
         color: rgba(255, 255, 255, 0.5);
+
+        p {
+            transition: all .3s linear;
+        }
     }
     
     &-decoration {
@@ -62,6 +67,7 @@
         border: 1px solid $secondary-color;
         margin-top: 20px;
         margin-bottom: 24px;
+        transition: all .3s linear;
     }
 }
 

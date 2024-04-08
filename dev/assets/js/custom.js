@@ -1,9 +1,3 @@
-const burger = document.querySelector(".hamburger");
-burger.addEventListener("click", function () {
-	burger.classList.toggle("is-active");
-
-});
-
 const dishesArr = [
 	{
 	  id: 1,
@@ -50,6 +44,12 @@ const dishesArr = [
 ];
 
 window.addEventListener("load", function () {
+
+	const burger = document.querySelector (".hamburger");
+		burger.addEventListener("click", function () {
+		burger.classList.toggle("is-active");
+	});
+
 	const dishesContainer = document.querySelector(".dishes__card-container");
  
 	const renderDishes = (array) => {
@@ -168,23 +168,12 @@ window.addEventListener("load", function () {
 	})
 
 	const dishesCard = document.querySelectorAll('.dishes__card');
-	
-
 	window.addEventListener('resize', function() {
 		const screenWidth = window.innerWidth;
-		const carouselInner = document.querySelector('.carousel-inner')
 		const firstElement = document.querySelector('.carousel-inner :first-child');
 
-		let html = `
-		<button class="carousel-control-prev" type="button" data-bs-target="card-container" data-bs-slide="prev">
-		  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-		  <span class="visually-hidden">Previous</span>
-		</button>
-		<button class="carousel-control-next" type="button" data-bs-target="card-container" data-bs-slide="next">
-		  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-		  <span class="visually-hidden">Next</span>
-		</button>
-	  `;
+		const prevButton = document.querySelector('.carousel-control-prev');
+		const nextButton = document.querySelector('.carousel-control-next');
 
 		if (screenWidth < 759) {
 		  	dishesContainer.classList.add('carousel-inner');
@@ -193,27 +182,83 @@ window.addEventListener("load", function () {
 			});
 			firstElement.classList.add('active');
 
+			const carouselInner = document.querySelector('.carousel-inner')
 
-			
-				// Вставляємо HTML-код до контейнера
-				carouselInner.insertAdjacentHTML('beforeend', html);
+
+
+			let html = `
+				<button class="carousel-control-prev" type="button" data-bs-target="#card-container" data-bs-slide="prev">
+				  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				  <span class="visually-hidden">Previous</span>
+				</button>
+				<button class="carousel-control-next" type="button" data-bs-target="#card-container" data-bs-slide="next">
+				  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+				  <span class="visually-hidden">Next</span>
+				</button>
+	  		`;
+
+	  
+		// Вставляємо HTML-код до контейнера
+		carouselInner.insertAdjacentHTML('beforeend', html);
+
 
 
 		} else {
 			dishesContainer.classList.remove('carousel-inner');
-			dishesCard.forEach( e => {
-				e.classList.remove('carousel-item')
+
+			dishesCard.forEach((e) => {
+				e.classList.remove('carousel-item');
+				e.classList.remove('active');
 			});
-			firstElement.classList.remove('active');
+			
+			prevButton.remove();
+			nextButton.remove();
 		}
+		
 	});
-	  
-
-
-
+	
 });
 
+// // // Видаляємо євент
+// window.removeEventListener('resize', arguments.callee);
 
+
+window.addEventListener('resize', function() {
+	// const carouselInner = document.querySelector('.carousel-inner')
+
+	// 	let html = `
+	// 		<button class="carousel-control-prev" type="button" data-bs-target="#card-container" data-bs-slide="prev">
+	// 		  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+	// 		  <span class="visually-hidden">Previous</span>
+	// 		</button>
+	// 		<button class="carousel-control-next" type="button" data-bs-target="#card-container" data-bs-slide="next">
+	// 		  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+	// 		  <span class="visually-hidden">Next</span>
+	// 		</button>
+	//   	`;
+
+	  
+	// 	// Вставляємо HTML-код до контейнера
+	// 	carouselInner.insertAdjacentHTML('beforeend', html);
+		
+		// // // Видаляємо євент
+		// window.removeEventListener('resize', arguments.callee);
+		//   // Перевіряємо, чи елемент `.carousel-inner` існує та видимий
+		// if (carouselInner = true) {
+		// 	// Знаходимо кнопки
+		// 	console.log(123)
+		// 	const prevButton = document.querySelector('.carousel-control-prev');
+		// 	const nextButton = document.querySelector('.carousel-control-next');
+			
+		// 	console.log(prevButton)
+		// 	console.log(nextButton)
+		// 	// Перевіряємо, чи кнопки існують, і видаляємо їх
+		// 	if (prevButton) prevButton.remove();
+		// 	if (nextButton) nextButton.remove();
+			
+		// }
+		
+});
 
 
 
@@ -241,20 +286,5 @@ var swiper = new Swiper(".mySwiper", {
 	  el: ".swiper-pagination",
 	},
 });
-
-// var swiperSecond = new Swiper(".mySwiper-sec", {
-// 	centeredSlides: true,
-// 	slidesPerView: "auto",
-// 	loop: true,
-
-// 	navigation: {
-// 	  nextEl: ".swiper-button-next",
-// 	  prevEl: ".swiper-button-prev",
-// 	},
-
-// 	pagination: {
-// 		el: ".swiper-pagination",
-// 	  },
-//   });
 
 AOS.init();

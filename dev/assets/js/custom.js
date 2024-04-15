@@ -168,6 +168,8 @@ window.addEventListener("load", function () {
 	})
 
 	const dishesCard = document.querySelectorAll('.dishes__card');
+	let buttonsAdded = false;
+
 	window.addEventListener('resize', function() {
 		const screenWidth = window.innerWidth;
 		const firstElement = document.querySelector('.carousel-inner :first-child');
@@ -183,7 +185,7 @@ window.addEventListener("load", function () {
 			firstElement.classList.add('active');
 
 			const carouselInner = document.querySelector('.carousel-inner')
-
+			
 
 
 			let html = `
@@ -200,7 +202,7 @@ window.addEventListener("load", function () {
 	  
 		// Вставляємо HTML-код до контейнера
 		carouselInner.insertAdjacentHTML('beforeend', html);
-
+		buttonsAdded = true;
 
 
 		} else {
@@ -213,6 +215,8 @@ window.addEventListener("load", function () {
 			
 			prevButton.remove();
 			nextButton.remove();
+
+			buttonsAdded = false;
 		}
 		
 	});
@@ -288,3 +292,6 @@ var swiper = new Swiper(".mySwiper", {
 });
 
 AOS.init();
+Fancybox.bind();
+
+  

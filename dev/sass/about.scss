@@ -1,7 +1,9 @@
 .about {
-    margin-bottom: 50px;
+    margin-bottom: 120px;
 
     .title {
+        padding-top: 90px;
+        
         &::before {
             content: "ABOUT";
          }

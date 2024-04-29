@@ -125,7 +125,7 @@
 
             &:checked,
             &:checked ~ .actions-rating__label {
-                color: #F9AD3D;
+                color: $secondary-color;
             }
         }
 
@@ -138,7 +138,7 @@
             &:hover,
             &:hover ~ .actions-rating__label,
             &:checked ~ .actions-rating__label:hover {
-                color: #F9AD3D;
+                color: $secondary-color;
             }
 
             &::before {

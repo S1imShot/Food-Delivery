@@ -178,45 +178,51 @@ window.addEventListener("load", function () {
 		const nextButton = document.querySelector('.carousel-control-next');
 
 		if (screenWidth < 759) {
-		  	dishesContainer.classList.add('carousel-inner');
-			dishesCard.forEach( e => {
-				e.classList.add('carousel-item')
-			});
-			firstElement.classList.add('active');
-
-			const carouselInner = document.querySelector('.carousel-inner')
+			if (!buttonsAdded) {
+				dishesContainer.classList.add('carousel-inner');
+				dishesCard.forEach( e => {
+				  e.classList.add('carousel-item')
+			  });
+			  firstElement.classList.add('active');
+  
+			  const carouselInner = document.querySelector('.carousel-inner')
+			  
+  
+  
+			  let html = `
+				  <button class="carousel-control-prev" type="button" data-bs-target="#card-container" data-bs-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Previous</span>
+				  </button>
+				  <button class="carousel-control-next" type="button" data-bs-target="#card-container" data-bs-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Next</span>
+				  </button>
+				`;
+				
+				
+				// Вставляємо HTML-код до контейнера
+				carouselInner.insertAdjacentHTML('beforeend', html);
+				buttonsAdded = true;
+			}
 			
-
-
-			let html = `
-				<button class="carousel-control-prev" type="button" data-bs-target="#card-container" data-bs-slide="prev">
-				  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-				  <span class="visually-hidden">Previous</span>
-				</button>
-				<button class="carousel-control-next" type="button" data-bs-target="#card-container" data-bs-slide="next">
-				  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-				  <span class="visually-hidden">Next</span>
-				</button>
-	  		`;
-
-	  
-		// Вставляємо HTML-код до контейнера
-		carouselInner.insertAdjacentHTML('beforeend', html);
-		buttonsAdded = true;
 
 
 		} else {
-			dishesContainer.classList.remove('carousel-inner');
-
-			dishesCard.forEach((e) => {
-				e.classList.remove('carousel-item');
-				e.classList.remove('active');
-			});
+			if (buttonsAdded) {
+				dishesContainer.classList.remove('carousel-inner');
 			
-			prevButton.remove();
-			nextButton.remove();
+				dishesCard.forEach((e) => {
+					e.classList.remove('carousel-item');
+					e.classList.remove('active');
+				});
+				
+				prevButton.remove();
+				nextButton.remove();
+	
+				buttonsAdded = false;
+			}
 
-			buttonsAdded = false;
 		}
 		
 	});
